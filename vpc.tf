@@ -34,4 +34,7 @@ cidr_block = "0.0.0.0/0"
 gateway_id = aws_internet_gateway.three.id
 }
 }
-
+resource "aws_route_table_association" "five" {
+subnet_id = aws_subnet.two.id
+route_table_id = aws_route_table.four.id
+}
